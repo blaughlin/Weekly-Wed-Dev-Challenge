@@ -1,0 +1,85 @@
+html, body {
+    background-color: #002244;
+    color: white;
+}
+
+#myCanvas {
+
+    border: 1px solid  black;
+}
+
+#notes {
+    font-size: 5em;
+}
+
+.xylophone-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    /* min-height: 50vh; */
+}
+
+.xylophone {
+    display: flex;
+}
+
+.key {
+    background-color: white;
+    /* height: calc(var(--width) * 4);
+    width: var(--width); */
+    height: 100px;
+    width: 100px;
+    border: 1px solid #333;
+    color: white;
+    text-align: center;
+    font-size: 2em;
+
+
+}
+
+.key.active{
+    opacity: 0.5;
+}
+
+.C {
+    height: 100px;
+    width: 100px;
+    background-color: #FF3B30;
+}
+
+.D {
+    height: 125px;
+    width: 100px;
+    background-color: #FF9500;
+}
+
+.E {
+    height: 150px;
+    width: 100px;
+    background-color: #FFCC00;
+}
+
+.F {
+    height: 175px;
+    width: 100px;
+    background-color: #34C759;
+}
+
+.G {
+    height: 200px;
+    width: 100px;
+    background-color: #5856D6;
+}
+
+.A {
+    height: 250px;
+    width: 100px;
+    background-color: #007AFF;
+}
+
+.B {
+    height: 300px;
+    width: 100px;
+    background-color: #AF52DE;
+}

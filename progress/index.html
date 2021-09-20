@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="style.css">
+
+    <title>Xylophone</title>
+</head>
+<body>
+    <h1>Xylophone</h1>
+    <div id="notes"></div>
+    <div class="progress-container">
+        <div class="progress-label">Score</div>
+        <div id="progress">0</div>
+    </div>
+    <!-- <canvas id="myCanvas" width="200" height="100"></canvas> -->
+    <div class="xylophone-container">
+        <div class="xylophone">
+            <div data-note="C" class="key C">C</div>
+            <div data-note="D" class="key D">D</div>
+            <div data-note="E" class="key E" >E</div>
+            <div data-note="F" class="key F">F</div>
+            <div data-note="G" class="key G">G</div>
+            <div data-note="A" class="key A">A</div>
+            <div data-note="B" class="key B">B</div>
+        </div>
+    </div>
+
+    <audio id="C" src="audio/C.wav"></audio>
+    <audio id="D" src="audio/D.wav"></audio>
+    <audio id="E" src="audio/E.wav"></audio>
+    <audio id="F" src="audio/F.wav"></audio>
+    <audio id="G" src="audio/G.wav"></audio>
+    <audio id="A" src="audio/A.wav"></audio>
+    <audio id="B" src="audio/B.wav"></audio>
+</body>
+<script src="progress.js"></script>
+</html>
