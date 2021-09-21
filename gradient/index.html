@@ -9,15 +9,18 @@
         <form id="gradient" class="gradient">
             <div>
                 <label for="picker-1">Color 1:</label>
-                <input id="picker-1" type="color" name="color1" value="#b5caf9"/>
+                <input id="picker-1" oninput="changeBackground()" type="color" name="color1" value="#b5caf9"/>
             </div>
             <div>
                 <label for="picker-2">Color 2:</label>
-                <input id="picker-2" type="color" name="color2" value="#aad186"/>
+                <input id="picker-2" oninput="changeBackground()" type="color" name="color2" value="#aad186"/>
             </div>
             <label for="split">Split:</label>
-            <input value=50 type="range" id="split" name="split" min="0" max="100">
+            <input value=50 type="range" oninput="changeBackground()" id="split" name="split" min="0" max="100">
+
+             <label for="degree">Degrees:</label>
+            <input value=0 type="range" oninput="changeBackground()" id="degree" name="split" min="0" max="360">
         </form>
-        <script src="index.pack.js"></script>
+        <script src="index.js"></script>
     </body>
 </html>
