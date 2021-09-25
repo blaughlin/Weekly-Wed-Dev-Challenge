@@ -43,6 +43,29 @@ input[type=color] {
     justify-content: space-evenly;
 }
 
+.btn{
+    display: none;
+    font-family: 'Sen',
+    sans-serif;
+    background-color: whitesmoke;
+    margin: 0 auto;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #E0FBFC;
+    display: block;
+    font-size: 1.3rem;
+    color: #3D5A80;
+}
+
+.btn:hover {
+    opacity: 0.5;
+}
+
+.btn:disabled,
+btn[disabled] {
+    opacity: 0.2;
+}
 /* .degree{
     display: block;
 } */

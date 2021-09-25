@@ -71,7 +71,6 @@ function changeBackground() {
     grad = `linear-gradient(${degree}deg`
      for (i=1; i <= totalColors -1; i++){
         splitArray[i] = document.getElementById(`split${i}`).value
-        console.log(splitArray[i])
     }
     for(i=1; i <= totalColors; i++){
         colorArray[i] = document.getElementById(`picker-${i}`).value
