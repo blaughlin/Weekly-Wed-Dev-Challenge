@@ -5,6 +5,10 @@
 totalColors = 2
 addColorBtn = document.getElementById("addColor")
 removeColorBtn = document.getElementById("removeColor")
+randomColorBtn = document.getElementById("randomColor")
+
+document.getElementById("picker-1").value = `#${Math.floor(Math.random()*16777215).toString(16)}`
+document.getElementById("picker-2").value =  `#${Math.floor(Math.random()*16777215).toString(16)}`
 let colorArray = []
 let splitArray = []
 
@@ -12,6 +16,7 @@ addColorBtn.addEventListener("click", () => {
     totalColors += 1
     checkButtons()
     addColorPicker()
+    changeBackground()
 })
 
 removeColorBtn.addEventListener("click", () => {
@@ -19,6 +24,16 @@ removeColorBtn.addEventListener("click", () => {
     totalColors -= 1
     checkButtons()
     changeBackground()
+})
+
+randomColorBtn.addEventListener("click", () => {
+    for (i = 1; i<= totalColors; i++) {
+        randomColor = Math.floor(Math.random()*16777215).toString(16)
+        document.getElementById(`picker-${i}`).value = `#${randomColor}`
+        colorArray[i] = randomColor
+       }
+    changeBackground()
+
 })
 
 function checkButtons(){
@@ -41,14 +56,15 @@ function updateColors(){
 
 // add color picker 
 function addColorPicker(){
+    randomColor = `#${Math.floor(Math.random()*16777215).toString(16)}`
     let newColor = 
     `<div id="color${totalColors}Div">
         <label for="picker-${totalColors}">Color ${totalColors}:</label>
-        <input id="picker-${totalColors}" oninput="changeBackground()" type="color" name="color${totalColors}"/>
+        <input id="picker-${totalColors}" oninput="changeBackground()" type="color" name="color${totalColors}" value="${randomColor}"/>
     </div>
     <div id="split${totalColors - 1}Div">
         <label for="split${totalColors - 1}">Split:</label>
-        <input value=90 type="range" oninput="changeBackground()" id="split${totalColors - 1}" name="split${totalColors - 1}" min="0" max="100">
+        <input value=${30+totalColors+10} type="range" oninput="changeBackground()" id="split${totalColors - 1}" name="split${totalColors - 1}" min="0" max="100">
     </div>`
     document.getElementById("gradient").innerHTML += newColor
     updateColors()
